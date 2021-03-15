@@ -35,7 +35,7 @@ function getMySalary(country = ukraine) {
             taxes: taxes,
             profit: profit        
         };
-        console.log(object);
+        console.log("Object with data for Ukraine:", object);
     }, 10000);
 }
 getMySalary(ukraine);
