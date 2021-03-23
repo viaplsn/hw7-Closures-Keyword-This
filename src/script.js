@@ -27,7 +27,9 @@ Total amount of taxes in Litva: ${getTotalTaxes.call(litva)}`);
 //Створіть функцію яка буде писати в консоль об'єкт виду: { salary: number, taxes: number, profit: number } кожні 10 секунд. 
 function getMySalary(country = ukraine) {
     setInterval(function(){
-        const salary = Math.round(1500 + Math.random() * (2000 - 1500));
+        const minSalary = 1500;
+        const maxSalary = 2000;
+        const salary = Math.round(minSalary + Math.random() * (maxSalary - minSalary));
         const taxes = +(country.tax * salary).toFixed(2);
         const profit = +(salary - taxes).toFixed(2);
         const object = {
